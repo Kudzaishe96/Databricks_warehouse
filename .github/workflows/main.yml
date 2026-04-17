@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v4   # ✅ upgraded to Node.js 24 compatible version
 
       - name: Set up Databricks CLI
-        uses: databricks/setup-@main   # ✅ pin to stable release instead of @main
+        uses: databricks/setup-cli@main   # ✅ pin to stable release instead of @main
 
       - name: Update Databricks Repo (Dev)
         run: |
@@ -45,7 +45,7 @@ jobs:
         uses: actions/checkout@v4   # ✅ upgraded
 
       - name: Set up Databricks CLI
-        uses: databricks/setup-@main   # ✅ pinned
+        uses: databricks/setup-cli@main   # ✅ pinned
 
       - name: Update Databricks Repo (Prod)
         run: |
