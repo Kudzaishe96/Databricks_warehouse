@@ -1,4 +1,4 @@
-# Databricks_Warehouse
+# Databricks_Warehouses
 Extracting data using DataBricks
 ##
 
