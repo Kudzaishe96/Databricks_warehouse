@@ -12,6 +12,7 @@ def silver_crm_customers():
     df_bronze = spark.readStream.option("ignoreDeletes", "true").table("kue_data_warehousing_source.bronze.crm_customer")
     df_bronze = df_bronze.where(F.col("cst_create_date").isNotNull())
 #TRANSFORM DATA
+#testing
     df_silver = df_bronze.where(df_bronze.cst_id.isNotNull())\
                         .withColumn("cst_firstname",trim(df_bronze.cst_firstname))\
                         .withColumn("cst_lastname",trim(df_bronze.cst_lastname))\
